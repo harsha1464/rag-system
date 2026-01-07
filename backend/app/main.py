@@ -1,0 +1,12 @@
+from fastapi import FastAPI
+
+app = FastAPI(
+    title="RAG System Backend",
+    description="Backend service for a the RAG system",
+    version="0.1.0",
+)
+
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "service": "rag-backend"}
