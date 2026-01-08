@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import health, llm
+from app.routers import health, llm, ingest
 
 app = FastAPI(
     title="RAG System Backend",
@@ -10,3 +10,4 @@ app = FastAPI(
 # Register routers
 app.include_router(health.router)
 app.include_router(llm.router)
+app.include_router(ingest.router)
